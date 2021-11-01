@@ -1,0 +1,59 @@
+.Main{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    margin-bottom: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Photo{
+    position: absolute;
+    left: 8%;
+    top: 80px;
+    width: 25%;
+    height: auto;
+}
+
+.shape{
+    position: absolute;
+    left: 0px;
+    top:150px;
+    height: 300px;
+    width: 100%;
+    background-color: #c6ebb856;
+}
+
+.shape2{
+    position: absolute;
+    left: 0px;
+    top:250px;
+    height: 300px;
+    width: 100%;
+    background-color: #c6ebb856;
+}
+
+.text{
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    font-style: italic;
+    text-align: left;
+    color: #42175A;
+    font-size: 100px;
+}
+
+.Button{
+    position: absolute;
+    top: 420px;
+    color: white;
+    background-color:  #42175A;
+    font-style: italic;
+    margin-left: 20px;
+    font-size: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+}

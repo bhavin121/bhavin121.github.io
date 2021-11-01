@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input type="email" title="email" id="email"/><br/><br/>
+        <input type="password" title="password" id="pass"/><br/><br/>
+        <button id="signUp">Sign Up</button>
+        <button id="signIn">Log In</button><br/><br/>
+        <button id="logOut">Log Out</button><br/><br/>
+        <button id="google">Sign In with Google</button>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+        import { getAuth, 
+            createUserWithEmailAndPassword, 
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signInWithPopup,
+            GoogleAuthProvider,
+            signOut } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDROUj1Mo2mRpAiI_z0Gvb74DGJ3YdpTaE",
+          authDomain: "fooder-se.firebaseapp.com",
+          projectId: "fooder-se",
+          storageBucket: "fooder-se.appspot.com",
+          messagingSenderId: "1002239577737",
+          appId: "1:1002239577737:web:daa2ec2c6a7507a2b90058",
+          measurementId: "G-5VB8D0WLVF"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        document.getElementById('signUp').addEventListener('click', function(){
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pass').value;
+            signUp(email, password);
+        });
+
+        document.getElementById('signIn').addEventListener('click', function(){
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pass').value;
+            signIn(email, password);
+        });
+
+        document.getElementById('logOut').addEventListener('click', function(){
+            logOut();
+        });
+
+        document.getElementById('google').addEventListener('click', function(){
+            signInWithGoogle();
+        });
+
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;
+            console.log("Signed In");
+            console.log(user);
+            // ...
+        } else {
+            console.log("Signed Out");
+            // User is signed out
+            // ...
+        }
+        });
+
+        function signInWithGoogle(){
+            signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // The signed-in user info.
+                const user = result.user;
+                console.log("Success");
+                console.log(user);
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage);
+                // The email of the user's account used.
+                const email = error.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+        }
+
+        function logOut(){
+            signOut(auth).then(() => {
+            console.log('Sign-out successful.');
+            }).catch((error) => {
+            console.log('An error happened.');
+            });
+        }
+
+        function signIn(email, password){
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log('success');
+                console.log(user);
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log("error");
+                console.log(errorMessage);
+            });
+        }
+
+        function signUp(email, password){
+                console.log(email);
+                createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    var user = userCredential.user;
+                    console.log(user);
+                    // ...
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log(errorMessage);
+                    // ..
+                });
+            }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Nav{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #c6ebb88f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Logo{
+    position: absolute;
+    left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0px;
+    bottom: 0px;
+}
+
+.Options{
+    position: absolute;
+    display: inline-block;
+    height: fit-content;
+    right: 3%;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0px;
+    bottom: 0px;
+}
+
+.Login{
+    color: white;
+    background-color:  #42175A;
+    margin-left: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.Login:hover{
+    background-color:  #300447;
+}
+
+.Text{
+    color:  #42175A;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+/* .Text:hover{
+    font-size: 22px;
+} */

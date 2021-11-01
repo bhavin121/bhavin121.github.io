@@ -1,0 +1,88 @@
+hr{
+    position: absolute;
+    width: 270px;
+    height: 2px;
+    left: 5%;
+    top: 23%;
+    background: #42175A;
+}
+
+.Footer{
+    margin-top: auto;
+    position: absolute;
+    width: 1535px;
+    height: 434px;
+    left: -39px;
+    top: 1298px;
+
+    background: #C6EBB8;
+    opacity: 1;
+}
+
+.FooterOptions{
+    padding-top: 4%;
+}
+
+.FLogo{
+    position: absolute;
+    left: 5%;
+    margin-top: 56px;
+    margin-bottom: auto;
+    top: 0px;
+    bottom: 0px;
+}
+
+.GroupDetails{
+    position: absolute;
+    text-align: left;
+    left: 5%;
+    top: 25%;
+}
+
+.SmallFText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #42175A;
+}
+
+.FText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 34px;
+    /* identical to box height */
+    color: #42175A;
+}
+
+.copyright{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    color: #42175A;
+}
+
+.images{
+    padding-top:4%;
+    position: absolute;
+    top: 0;
+    right: 2%;
+}
+
+.FoodImages{
+    display: inline-block;
+    background: #42175A;
+    margin-right: 15px;
+    opacity: 0.3;
+    border-radius: 1000px;
+}
