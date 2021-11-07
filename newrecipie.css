@@ -1,0 +1,86 @@
+h1{
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 57px;
+    /* identical to box height */
+
+
+    color: #42175A;
+}
+
+a{
+    color: black;
+}
+
+.recipeList{
+    margin: 111px 90px 100px;
+}
+
+.underline{
+    margin-top: 0.5%;
+    width:250px;
+    height:4px;
+    background-color: #C6EBB8;
+    border:1px solid #C6EBB8;
+    opacity: 0.3;
+}
+
+.recipeBox{
+    margin-top: 2%;
+    width: 1258px;
+    height: 107px;
+    left: 90px;
+    top: 274px;
+    background: #CAF7E3;
+}
+
+
+.recipeContent{
+    text-align: left;
+    margin-left: 3%;
+    padding-top: 30px;
+}
+
+.recipeValue1{
+    display: inline-block;
+    margin-left: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 41px;
+
+    /* identical to box height */
+
+
+    color: #42175A;
+}
+
+.recipeValue2{
+    display: inline-block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 20px;
+    color: #42175A;
+}
+
+.recipeFood{
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.expandRead{
+    position: absolute;
+    margin-left: 75%;
+    text-align: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
